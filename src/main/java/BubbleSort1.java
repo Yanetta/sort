@@ -3,8 +3,13 @@ import java.util.Arrays;
 
 public class BubbleSort1 {
 
-    public static void main(String[] args) {
-        int[] numbers = {157, 98, 3, 57, 1};
+    int[] numbers;
+
+    public BubbleSort1(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public int[] bubbleSorting(int[] numbers) {
         System.out.println("Unsorted array: " + Arrays.toString(numbers));
         System.out.println(" ");
 
@@ -18,9 +23,15 @@ public class BubbleSort1 {
                 }
                 System.out.println(Arrays.toString(numbers));
             }
-
         }
-        System.out.println("Sorted array: " +Arrays.toString(numbers));
+        System.out.println("Sorted array: " + Arrays.toString(numbers));
+        return numbers;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {157, 98, 3, 57, 1};
+        BubbleSort1 myBubbleSort = new BubbleSort1(numbers);
+        int[] ints = myBubbleSort.bubbleSorting(numbers);
     }
 }
 
